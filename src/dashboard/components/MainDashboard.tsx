@@ -26,7 +26,7 @@ const MainDashboard = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
         <div className="border rounded-3xl p-4">
           <h4 className="font-semibold text-xl">Success rate</h4>
 

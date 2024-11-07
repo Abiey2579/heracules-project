@@ -9,7 +9,7 @@ const StatsAndMessages = () => {
 
   const [ActiveMenu, setActiveMenu] = useState<number>(2);
   return (
-    <div className="w-80 bg-gray-50 flex-shrink-0 pb-4 px-4 rounded-tl-3xl overflow-y-auto">
+    <div className="lg:block hidden w-80 bg-gray-50 flex-shrink-0 pb-4 px-4 rounded-tl-3xl overflow-y-auto">
       <div className="text-sm sticky top-0 bg-gray-50 pt-6 font-medium text-center text-gray-500 border-b border-gray-200">
         <ul className="flex flex-wrap -mb-px">
           <li className="me-2">

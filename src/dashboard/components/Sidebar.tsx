@@ -1,4 +1,9 @@
-import { Cog6ToothIcon, EyeIcon, LinkIcon } from "@heroicons/react/24/outline";
+import {
+  Cog6ToothIcon,
+  EyeIcon,
+  LinkIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
 import {
   ArrowPathRoundedSquareIcon,
   ArrowsRightLeftIcon,
@@ -10,13 +15,28 @@ import {
 } from "@heroicons/react/24/solid";
 import { useState } from "react";
 
-const Sidebar = () => {
+type SidebarProps = {
+  handleSidebar: Function;
+};
+
+const Sidebar = (props: SidebarProps) => {
   const [TogglePaymentItems, setTogglePaymentItems] = useState<boolean>(true);
   const [ToggleCommerceItems, setToggleCommerceItems] =
     useState<boolean>(false);
+
   return (
-    <div className="w-80 bg-gray-50 h-screen py-6 px-8 overflow-hidden">
-      <h1 className="font-bold text-3xl mb-9">Payd</h1>
+    <div
+      className={`xl:block hidden xl:relative fixed xl:z-0 z-30 left-0 top-0 min-w-80 bg-gray-50 h-screen py-6 px-8 SidebarComponent`}
+    >
+      <div className="flex items-center justify-between mb-9">
+        <h1 className="font-bold text-3xl ">Payd</h1>
+        <button
+          onClick={() => props.handleSidebar()}
+          className="p-2 rounded bg-black text-white xl:hidden block"
+        >
+          <XMarkIcon className="w-5" />
+        </button>
+      </div>
 
       <div className="py-2">
         <button
