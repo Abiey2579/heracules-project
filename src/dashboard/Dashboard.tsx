@@ -52,7 +52,9 @@ const Dashboard = () => {
         <TopbarMobile handleTopbarMobile={handleTopbarMobile} />
         <div className="flex gap-4 justify-between flex-1 pt-3 overflow-hidden">
           <MainDashboard />
-          <StatsAndMessages />
+          <div className="overflow-y-auto lg:block hidden">
+            <StatsAndMessages />
+          </div>
         </div>
       </div>
     </div>

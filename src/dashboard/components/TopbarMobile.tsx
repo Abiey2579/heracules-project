@@ -4,6 +4,7 @@ import {
   MagnifyingGlassIcon,
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import StatsAndMessages from "./StatsAndMessages";
 
 type SidebarProps = {
   handleTopbarMobile: Function;
@@ -12,7 +13,7 @@ type SidebarProps = {
 const TopbarMobile = (props: SidebarProps) => {
   return (
     <div
-      className={`xl:hidden hidden xl:relative fixed xl:z-0 z-30 right-0 top-0 min-w-80 bg-gray-50 h-screen py-6 px-6 MobileSidebarComponent`}
+      className={`xl:hidden hidden xl:relative fixed xl:z-0 z-30 right-0 top-0 min-w-80 bg-gray-50 h-screen py-6 px-6 MobileSidebarComponent  overflow-y-auto`}
     >
       <div className="flex items-center gap-4 justify-between mb-9">
         <button
@@ -47,6 +48,10 @@ const TopbarMobile = (props: SidebarProps) => {
           <BellAlertIcon className="w-5" />
         </button>
       </div>
+
+      <hr />
+
+      <StatsAndMessages />
     </div>
   );
 };
